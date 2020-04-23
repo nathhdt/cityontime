@@ -92,7 +92,7 @@
               echo "</a>";
               echo "<a class='dropdown-item'>";
               echo "<button type='submit' class='btn btn-light' name='signin-submit'>Connexion</button>";
-              echo "<button type='button' class='btn btn-secondary'>Inscription </button>";
+              echo "<button type='button' class='btn btn-secondary'>Inscription</button>";
               echo "</a>";
               echo "</div>";
               echo "</form>";

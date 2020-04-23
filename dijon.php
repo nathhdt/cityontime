@@ -33,25 +33,25 @@
         </thead>
         <tbody>
           <tr>
-            <td>T1</td>
+            <td><i class="fas fa-train"></i>  T1</td>
             <td><strong>République</strong></td>
             <td>Quetigny</td>
-            <td><strong>09:44</strong></td>
+            <td><strong>09:53</strong></td>
           </tr>
           <tr>
-            <td>T2</td>
+            <td><i class="fas fa-train"></i>  T2</td>
             <td><strong>République</strong></td>
             <td>Chenove</td>
-            <td><strong>09:42</strong></td>
+            <td><strong>09:47</strong></td>
           </tr>
           <tr>
-            <td>L3</td>
+            <td><i class="fas fa-bus"></i>  L3</td>
             <td><strong>Grésilles</strong></td>
             <td>Epirey Cap Nord</td>
             <td><strong>09:51</strong></td>
           </tr>
           <tr>
-            <td>F40</td>
+            <td><i class="fas fa-bus"></i>  F40</td>
             <td><strong>Auditorium</strong></td>
             <td>Toison d'Or</td>
             <td><strong>10:08</strong></td>
