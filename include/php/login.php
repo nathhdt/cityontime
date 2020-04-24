@@ -7,7 +7,7 @@ if (isset($_POST['signin-submit'])) {
 
   if (empty($email) || empty($password))
     {
-      header("Location: ../../index");
+      header('Location: ' . $_SERVER['HTTP_REFERER']);
       exit();
     }
   else
@@ -22,11 +22,11 @@ if (isset($_POST['signin-submit'])) {
         if($count!=0) // Nom d'utilisateur et mot de passe corrects
         {
            $_SESSION['email'] = $email;
-           header('Location: ../../index');
+           header('Location: ' . $_SERVER['HTTP_REFERER']);
         }
         else
         {
-           header('Location: ../../index.php?error=1'); // Utilisateur ou mot de passe incorrect
+           header('Location: ' . $_SERVER['HTTP_REFERER'] . '?code=1'); // Utilisateur ou mot de passe incorrect
           exit();
         }
     }

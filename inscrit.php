@@ -2,7 +2,7 @@
 <html lang="fr">
 
 <head>
-  <title>CityOnTime - Dijon</title>
+  <title>CityOnTime - Vous êtes inscrit !</title>
 
   <!-- Header -->
   <?php include("header.inc"); ?>
@@ -19,7 +19,7 @@
       <div class="row">
         <div class="container mb-5">
           <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
-            <h3 class="section-title text-center my-5" style="color:#fafafa">Dijon</h3>
+            <h3 class="section-title text-center my-5" style="color:#fafafa">Vous êtes inscrit ! Connectez-vous dès maintenant dans la barre de navigation.</h3>
           </div>
         </div>
       </div>
