@@ -14,7 +14,7 @@
 <div class="container">
   <nav class="navbar navbar-expand-lg navbar-dark pt-4 px-0">
     <a class="navbar-brand mr-5" href="index">
-      <img src="images/logo.svg" class="mr-2" height=30>
+      <img src="images/logo.svg" class="mr-2" height=30 alt="CityOnTime">
       CityOnTime
     </a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">

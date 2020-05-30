@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="index">
-        <img src="images/logo-gris.png" class="mr-2" height=30>
+        <img src="images/logo-gris.png" class="mr-2" height=30 alt="CityOnTime">
         CityOnTime</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
