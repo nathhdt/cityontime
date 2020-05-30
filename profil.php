@@ -14,6 +14,9 @@
     <!-- Navigation -->
     <?php include("navbar.inc"); ?>
 
+    <!-- Données -->
+    <?php include("include/php/profile_data.php"); ?>
+
     <!-- Bloc profil -->
     <div class="inner-wrapper mt-auto mb-auto container">
       <div class="row">
@@ -29,25 +32,35 @@
                   <div class="row">
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Nom</label>
-                      <input type="text" class="form-control" placeholder="Nom" disabled>
+                      <input type="text" class="form-control" placeholder="<?php echo $nom; ?>" disabled>
                     </div>
                     <div class="form-group col-md-6">
                       <label for="form1-name2" class="col-form-label" style="color:#fafafa">Prénom</label>
-                      <input type="text" class="form-control" placeholder="Prénom" disabled>
+                      <input type="text" class="form-control" placeholder="<?php echo $prenom; ?>" disabled>
                     </div>
                   </div>
                   <div class="row">
                     <div class="form-group col-md-6">
                       <label for="form1-email" class="col-form-label" style="color:#fafafa">E-mail</label>
-                      <input type="email" class="form-control" placeholder="E-mail" disabled>
+                      <input type="email" class="form-control" placeholder="<?php echo $email; ?>" disabled>
                     </div>
                     <div class="form-group col-md-6">
                       <label for="form1-email" class="col-form-label" style="color:#fafafa">Ville</label>
                       <select class="custom-select" id="form1-state">
-                        <option value="0" selected="selected">Choisir une ville</option>
-                        <option value="1">Dijon</option>
-                        <option value="2">Angers</option>
-                        <option value="3">Nantes</option>
+<?php if ($ville == 'Dijon'): ?>
+  <option value="0" selected="selected">Dijon</option>
+  <option value="1">Angers</option>
+  <option value="2">Nantes</option>
+<?php elseif ($ville == 'Angers'): ?>
+  <option value="0">Dijon</option>
+  <option value="1" selected="selected">Angers</option>
+  <option value="2">Nantes</option>
+<?php else: ?>
+  <option value="0">Dijon</option>
+  <option value="1">Angers</option>
+  <option value="2" selected="selected">Nantes</option>
+<?php endif; ?>
+
                       </select>
                     </div>
                   </div>

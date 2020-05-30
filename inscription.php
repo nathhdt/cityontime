@@ -35,7 +35,7 @@ if (empty($user)) { } else {
             <div class="example col-lg-8 col-md-10 ml-auto mr-auto">
               <div class="row mb-5">
                 <div class="col-md-12">
-                <form class="form-signin" action="include/php/inscription" method="POST" id="signin-form">
+                <form class="form-signin" action="include/php/inscription" method="POST" id="signin-form" autocomplete="off">
                     <div class="row">
                       <div class="form-group col-md-6">
                         <label for="form1-name" class="col-form-label" style="color:#fafafa">Nom</label>
