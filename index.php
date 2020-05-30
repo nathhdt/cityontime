@@ -9,7 +9,6 @@
 </head>
 
 <body class="shards-app-promo-page--1">
-
   <div class="welcome d-flex justify-content-center flex-column">
 
     <!-- Navigation -->

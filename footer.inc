@@ -22,8 +22,10 @@
                 }
                 ?>
             <li class="nav-item">
+              <a class="nav-link" href="https://www.keolis.com/" target="_blank">Keolis</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="credits">Crédits</a>
-              
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://github.com/qowax" target="_blank">@qowax</a>

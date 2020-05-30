@@ -51,12 +51,8 @@
 
 <div class="welcome d-flex justify-content-center flex-column">
 
-
-
     <!-- Navigation -->
     <?php include("navbar.inc"); ?>
-
-    
 
     <!-- Données -->
     <?php include("include/php/profile_data.php"); ?>
