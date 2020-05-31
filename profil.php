@@ -15,7 +15,7 @@
     <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-bottom: 0rem;">
       <button type="button" class="close" data-dismiss="alert">
       <span aria-hidden="true">×</span></button>
-      <i class="fa fa-exclamation-circle"></i>
+      <i class="fa fa-check"></i>
       Modifications enregistrées avec succès !
     </div>
   </div>

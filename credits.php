@@ -27,7 +27,7 @@
                 <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto" style="color:#fafafa;text-align:center;">
                   <p><a target="_blank" href="https://designrevision.com/downloads/shards/">Shards UI toolkit</a><br>
                     <a target="_blank" href="https://fontawesome.com/">FontAwesome 5.13</a><br>
-                    <a target="_blank" href="https://getbootstrap.com/">Bootstrap 4.00</a><br>
+                    <a target="_blank" href="https://getbootstrap.com/">Bootstrap 4.3.1</a><br>
                     <a target="_blank" href="https://gist.github.com/outadoc/40060db45c436977a912/">API Keolis (par outadoc)</a></p>
                 </div>
               </div>
