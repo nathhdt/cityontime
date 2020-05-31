@@ -30,23 +30,15 @@
 
             <div class="row mb-5">
               <div class="col-md-12">
-                <form action="include/php/dijon/itineraire.php" method="POST" id="editerville-form">
+                <form autocomplete="off" action="include/php/dijon/itineraire.php" method="POST" id="editerville-form">
                   <div class="row">
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Départ</label>
-                      <select class="custom-select" id="form1-state" name="choixville">
-                        <option value="0" selected="selected">REPUBLIQUE</option>
-                        <option value="1">DARCY</option>
-                        <option value="2">UNIVERSITE</option>
-                      </select>
+                      <input id="inputDepart" type="text" class="form-control" placeholder="République..." style="position:relative;">
                     </div>
                     <div class="form-group col-md-6">
-                    <label for="form1-name" class="col-form-label" style="color:#fafafa">Arrivée</label>
-                      <select class="custom-select" id="form1-state" name="choixville">
-                        <option value="0" selected="selected">AUDITORIUM</option>
-                        <option value="1">FOCH GARE</option>
-                        <option value="2">QUETIGNY</option>
-                      </select>
+                      <label for="form1-name" class="col-form-label" style="color:#fafafa">Arrivée</label>
+                      <input id="inputArrivee" type="text" class="form-control" placeholder="Darcy..." style="position:relative;">
                     </div>
                   </div>
                   <div class="row">
@@ -74,9 +66,30 @@
   </div>
   <!-- Fin bloc ville -->
 
+  <!-- Script autocomplete -->
+  <script src="include/js/autocomplete.js"></script>
+  <script>
+    var arrets = ["<?php include("include/keolis-api/liste_arrets.php"); ?>"];
+
+    //Doublons
+    function removeDuplicates(arrets) {
+      let unique = {};
+        arrets.forEach(function(i) {
+        if (!unique[i]) {
+          unique[i] = true;
+        }
+      });
+      return Object.keys(unique);
+    }
+
+    liste_arrets = removeDuplicates(arrets)
+
+    autocomplete(document.getElementById("inputDepart"), liste_arrets);
+    autocomplete(document.getElementById("inputArrivee"), liste_arrets);
+  </script>
+
   <!-- Footer -->
   <?php include("footer.inc"); ?>
-
 </body>
 
 </html>
