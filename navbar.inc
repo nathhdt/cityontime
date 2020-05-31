@@ -85,7 +85,7 @@
             <a class="nav-link"><span class="badge mr-3 badge-pill badge-success"><?php echo $user; ?></span></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="margin-top: 4px;">
               <i class="fa fa-user-circle"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" style="width:max-content">

@@ -14,6 +14,7 @@ while ($row = $result->fetch_array(MYSQLI_NUM))
   $listearrets = $listearrets.$row[1].'", "';
 }
 
+
 echo substr($listearrets, 0, -4);
 
 ?>

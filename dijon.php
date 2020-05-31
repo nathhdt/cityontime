@@ -30,15 +30,15 @@
 
             <div class="row mb-5">
               <div class="col-md-12">
-                <form autocomplete="off" action="include/php/dijon/itineraire.php" method="POST" id="editerville-form">
+                <form autocomplete="off" action="include/keolis-api/divia_recherche.php" method="POST" id="editerville-form">
                   <div class="row">
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Départ</label>
-                      <input id="inputDepart" type="text" class="form-control" placeholder="République..." style="position:relative;">
+                      <input id="inputDepart" type="text" class="form-control" placeholder="République..." style="position:relative;" name="depart">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Arrivée</label>
-                      <input id="inputArrivee" type="text" class="form-control" placeholder="Darcy..." style="position:relative;">
+                      <input id="inputArrivee" type="text" class="form-control" placeholder="Darcy..." style="position:relative;" name="arrivee">
                     </div>
                   </div>
                   <div class="row">
@@ -69,7 +69,7 @@
   <!-- Script autocomplete -->
   <script src="include/js/autocomplete.js"></script>
   <script>
-    var arrets = ["<?php include("include/keolis-api/liste_arrets.php"); ?>"];
+    var arrets = ["<?php include("include/keolis-api/divia_liste_arrets.php"); ?>"];
 
     //Doublons
     function removeDuplicates(arrets) {
