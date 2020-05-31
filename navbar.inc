@@ -17,7 +17,10 @@
       <img src="images/logo.svg" class="mr-2" height=30 alt="CityOnTime">
       CityOnTime
     </a>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse show" id="navbarNavDropdown" style="">
       <ul class="navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="index">Accueil</a>
@@ -36,7 +39,7 @@
       </ul>
 
       <!-- Compte -->
-      <ul class="header-social-icons navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto">
 
         <!-- Vérification de session -->
         <?php
