@@ -19,11 +19,11 @@ echo '-- Heure: '.$lignes->heure.'<br><br><br>';
 $i = 0;
 foreach($lignes->alss->als as $val)
 {
-    echo '<p>-- ### LIGNE '.$lignes->alss->als[$i]->ligne->nom.' > '.$lignes->alss->als[$i]->ligne->vers.'</p>';
+    echo '<p>-- ### LIGNE '.str_replace("'", "''", $lignes->alss->als[$i]->ligne->nom).' > '.str_replace("'", "''", $lignes->alss->als[$i]->ligne->vers).'</p>';
 
 
     //XML arrêts
-    $arrets = simplexml_load_file('http://timeo3.keolis.com/relais/'.$codeville.'.php?xml=1&ligne='.$lignes->alss->als[$i]->ligne->code.'&sens='.$lignes->alss->als[$i]->ligne->sens);
+    $arrets = simplexml_load_file('http://timeo3.keolis.com/relais/'.$codeville.'.php?xml=1&ligne='.str_replace("'", "''", $lignes->alss->als[$i]->ligne->code).'&sens='.str_replace("'", "''", $lignes->alss->als[$i]->ligne->sens));
 
     //Parse des arrêts
     $j = 0;
@@ -31,7 +31,7 @@ foreach($lignes->alss->als as $val)
     {
 
 
-        echo 'INSERT INTO `cot_divia_arrets`(`ligne_nom`, `ligne_code`, `arret`, `arret_ref`, `direction`) VALUES (\''.$lignes->alss->als[$i]->ligne->nom.'\',\''.$lignes->alss->als[$i]->ligne->code.'\',\''.$arrets->alss->als[$j]->arret->nom.'\',\''.$arrets->alss->als[$j]->refs.'\',\''.$lignes->alss->als[$i]->ligne->vers.'\');<br>';
+        echo 'INSERT INTO `cot_divia_arrets`(`ligne_nom`, `ligne_code`, `arret`, `arret_ref`, `direction`) VALUES (\''.str_replace("'", "''", $lignes->alss->als[$i]->ligne->nom).'\',\''.str_replace("'", "''", $lignes->alss->als[$i]->ligne->code).'\',\''.str_replace("'", "''", $arrets->alss->als[$j]->arret->nom).'\',\''.str_replace("'", "''", $arrets->alss->als[$j]->refs).'\',\''.str_replace("'", "''", $lignes->alss->als[$i]->ligne->vers).'\');<br>';
         $j++;
     }
     $i++;
