@@ -26,16 +26,16 @@
             <h5 style="color:#fafafa;margin-top:11px;">Horaires de passage</h5>
             <div class="row mb-5" style="margin-bottom: 0rem!important;">
               <div class="col-md-12">
-                <form autocomplete="off" action="include/keolis-api/divia_recherche_arret.php" method="POST" id="editerville-form">
+                <form autocomplete="off" action="include/keolis-api/divia_recherche_arret" method="POST" id="horaires-form">
                   <div class="row">
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Arrêt</label>
-                      <input id="inputHorairesArret" type="text" class="form-control" placeholder="République..." style="position:relative;" name="depart">
+                      <input id="inputHorairesArret" type="text" class="form-control" placeholder="République..." style="position:relative;" name="arret">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Direction</label>
 
-                      <select class="custom-select" id="selectDirectionList" name="choixville">
+                      <select class="custom-select" id="selectDirectionList" name="direction">
                         <option value="0" selected="selected">Sélectionnez un arrêt valide</option>
                       </select>
 
@@ -58,7 +58,7 @@
             <h5 style="color:#fafafa;margin-top:11px;">Itinéraire</h5>
             <div class="row mb-5" style="margin-bottom: 0rem!important;">
               <div class="col-md-12">
-                <form autocomplete="off" action="include/keolis-api/divia_recherche.php" method="POST" id="editerville-form">
+                <form autocomplete="off" action="include/keolis-api/divia_recherche_itineraire" method="POST" id="itineraire-form">
                   <div class="row">
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Départ</label>
@@ -81,8 +81,6 @@
             </div>
           </div>
           <!-- Fin itinéraire -->
-
-
         </div>
       </div>
     </div>
@@ -110,12 +108,10 @@
 
     liste_arrets = removeDuplicates(arrets)
 
-    
+    //Autocompletes
     autocomplete_itineraire(document.getElementById("inputHorairesArret"), liste_arrets, directions)
     autocomplete(document.getElementById("inputItineraireDepart"), liste_arrets);
     autocomplete(document.getElementById("inputItineraireArrivee"), liste_arrets);
-    
-
   </script>
 
   <!-- Footer -->

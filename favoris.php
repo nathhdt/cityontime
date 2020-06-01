@@ -59,7 +59,7 @@ if (empty($user)): ?>
       <div class="row">
         <div class="container mb-5">
           <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
-            <h3 class="section-title text-center my-5" style="color:#fafafa">Favoris</h3>
+            <h3 class="section-title text-center my-5" style="color:#fafafa">Vous n'avez encore aucuns favoris !</h3>
           </div>
         </div>
       </div>
