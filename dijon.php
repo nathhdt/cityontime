@@ -21,24 +21,25 @@
           <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
             <h3 class="section-title text-center my-5" style="color:#fafafa">Dijon</h3>
           </div>
-          <div class="example col-lg-8 col-md-10 ml-auto mr-auto">
-            <h5 style="color:#fafafa">Itinéraire</h5>
-
-
-
-
-
-            <div class="row mb-5">
+          <!-- Horaires de passage -->
+          <div class="example col-lg-8 col-md-10 ml-auto mr-auto" style="border-radius: .625rem; box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1); border: 1px solid;margin-bottom:22px;">
+            <h5 style="color:#fafafa;margin-top:11px;">Horaires de passage</h5>
+            <div class="row mb-5" style="margin-bottom: 0rem!important;">
               <div class="col-md-12">
-                <form autocomplete="off" action="include/keolis-api/divia_recherche.php" method="POST" id="editerville-form">
+                <form autocomplete="off" action="include/keolis-api/divia_recherche_arret.php" method="POST" id="editerville-form">
                   <div class="row">
                     <div class="form-group col-md-6">
-                      <label for="form1-name" class="col-form-label" style="color:#fafafa">Départ</label>
-                      <input id="inputDepart" type="text" class="form-control" placeholder="République..." style="position:relative;" name="depart">
+                      <label for="form1-name" class="col-form-label" style="color:#fafafa">Arrêt</label>
+                      <input id="inputHorairesArret" type="text" class="form-control" placeholder="République..." style="position:relative;" name="depart">
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="form1-name" class="col-form-label" style="color:#fafafa">Arrivée</label>
-                      <input id="inputArrivee" type="text" class="form-control" placeholder="Darcy..." style="position:relative;" name="arrivee">
+                      <label for="form1-name" class="col-form-label" style="color:#fafafa">Direction</label>
+
+                      <select class="custom-select" id="form1-state" name="choixville">
+                        <option value="0" selected="selected">L3 - Epirey Cap Nord</option>
+                        <option value="1">L3 - Fontaine d'Ouche</option>
+                      </select>
+
                     </div>
                   </div>
                   <div class="row">
@@ -51,15 +52,38 @@
                 </form>
               </div>
             </div>
-
-
-
-
-
-
-
-
           </div>
+          <!-- Horaires de passage -->
+          <!-- Itinéraire -->
+          <div class="example col-lg-8 col-md-10 ml-auto mr-auto" style="border-radius: .625rem; box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1); border: 1px solid;">
+            <h5 style="color:#fafafa;margin-top:11px;">Itinéraire</h5>
+            <div class="row mb-5" style="margin-bottom: 0rem!important;">
+              <div class="col-md-12">
+                <form autocomplete="off" action="include/keolis-api/divia_recherche.php" method="POST" id="editerville-form">
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <label for="form1-name" class="col-form-label" style="color:#fafafa">Départ</label>
+                      <input id="inputItineraireDepart" type="text" class="form-control" placeholder="République..." style="position:relative;" name="depart">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="form1-name" class="col-form-label" style="color:#fafafa">Arrivée</label>
+                      <input id="inputItineraireArrivee" type="text" class="form-control" placeholder="Darcy..." style="position:relative;" name="arrivee">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <div>
+                        <button type="submit" class="btn btn-secondary" style="font-size: 12px" name='type-submit'>Rechercher</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Fin itinéraire -->
+
+
         </div>
       </div>
     </div>
@@ -74,7 +98,7 @@
     //Doublons
     function removeDuplicates(arrets) {
       let unique = {};
-        arrets.forEach(function(i) {
+      arrets.forEach(function(i) {
         if (!unique[i]) {
           unique[i] = true;
         }
@@ -84,8 +108,9 @@
 
     liste_arrets = removeDuplicates(arrets)
 
-    autocomplete(document.getElementById("inputDepart"), liste_arrets);
-    autocomplete(document.getElementById("inputArrivee"), liste_arrets);
+    autocomplete(document.getElementById("inputHorairesArret"), liste_arrets);
+    autocomplete(document.getElementById("inputItineraireDepart"), liste_arrets);
+    autocomplete(document.getElementById("inputItineraireArrivee"), liste_arrets);
   </script>
 
   <!-- Footer -->
