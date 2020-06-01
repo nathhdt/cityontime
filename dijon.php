@@ -35,9 +35,8 @@
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Direction</label>
 
-                      <select class="custom-select" id="form1-state" name="choixville">
-                        <option value="0" selected="selected">L3 - Epirey Cap Nord</option>
-                        <option value="1">L3 - Fontaine d'Ouche</option>
+                      <select class="custom-select" id="selectDirectionList" name="choixville">
+                        <option value="0" selected="selected">Sélectionnez un arrêt valide</option>
                       </select>
 
                     </div>
@@ -92,8 +91,11 @@
 
   <!-- Script autocomplete -->
   <script src="include/js/autocomplete.js"></script>
+  <script src="include/js/autocomplete-itineraire.js"></script>
   <script>
+    //Récupération des lignes
     var arrets = ["<?php include("include/keolis-api/divia_liste_arrets.php"); ?>"];
+    var directions = [<?php include("include/keolis-api/divia_liste_directions.php"); ?>];
 
     //Doublons
     function removeDuplicates(arrets) {
@@ -108,9 +110,12 @@
 
     liste_arrets = removeDuplicates(arrets)
 
-    autocomplete(document.getElementById("inputHorairesArret"), liste_arrets);
+    
+    autocomplete_itineraire(document.getElementById("inputHorairesArret"), liste_arrets, directions)
     autocomplete(document.getElementById("inputItineraireDepart"), liste_arrets);
     autocomplete(document.getElementById("inputItineraireArrivee"), liste_arrets);
+    
+
   </script>
 
   <!-- Footer -->
