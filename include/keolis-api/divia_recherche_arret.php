@@ -19,6 +19,8 @@ if (isset($_POST['type-submit'])) {
 
     $arret_ref = $row[0];
 
-    echo $arret_ref;
+
+    //Redirection vers la page horaires
+    header('Location: ../../horaires?ref='.$arret_ref);
 }
 ?>
