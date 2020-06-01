@@ -21,8 +21,9 @@ foreach($lignes->alss->als as $val)
 {
     echo '<p>-- ### LIGNE '.$lignes->alss->als[$i]->ligne->nom.' > '.$lignes->alss->als[$i]->ligne->vers.'</p>';
 
+
     //XML arrêts
-    $arrets = simplexml_load_file('http://timeo3.keolis.com/relais/'.$codeville.'.php?xml=1&ligne='.$lignes->alss->als[$i]->ligne->code.'&sens=A');
+    $arrets = simplexml_load_file('http://timeo3.keolis.com/relais/'.$codeville.'.php?xml=1&ligne='.$lignes->alss->als[$i]->ligne->code.'&sens='.$lignes->alss->als[$i]->ligne->sens);
 
     //Parse des arrêts
     $j = 0;
