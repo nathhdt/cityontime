@@ -49,8 +49,8 @@
               <div class="row mb-5" style="margin-bottom: 0rem!important;">
                 <div class="col-md-12">
                   <div class="row">
-                    <div class="col col-lg-2">
-                      <img src="images/transports/divia/<?php echo $ligne; ?>.png" style="margin-top:11px;border-radius:.280rem;">
+                    <div class="col col-lg-2" style="display: flex;align-items: center;flex-wrap: wrap;">
+                      <img src="images/transports/divia/<?php echo $ligne; ?>.png" style="border-radius:.280rem;">
                     </div>
                     <div class="col-6">
                       <h5 style="color:#fafafa;margin-top:11px;">> <?php echo $direction; ?><h4>
