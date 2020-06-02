@@ -35,8 +35,8 @@
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Direction</label>
 
-                      <select class="custom-select" id="selectDirectionList" name="direction">
-                        <option value="0" selected="selected">Sélectionnez un arrêt valide</option>
+                      <select class="custom-select" id="selectDirectionList" name="direction" placeholder="Sélectionnez un arrêt valide...">
+                        <option value="0" selected="selected">Sélectionnez un arrêt valide...</option>
                       </select>
 
                     </div>

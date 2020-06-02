@@ -17,7 +17,7 @@
     <?php include("navbar.inc"); ?>
 
     <!-- Données -->
-    <?php include("include/keolis-api/divia_itineraire.php"); ?>
+    <?php include("include/keolis-api/divia_horaires.php"); ?>
 
     <!-- Bloc inscription -->
     <div class="inner-wrapper mt-auto mb-auto container">
@@ -26,6 +26,21 @@
           <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
             <h3 class="section-title text-center my-5" style="color:#fafafa"><?php echo $arret; ?></h3>
           </div>
+          <?php if($nombrePassages == 0) : ?>
+              <!-- Passage -->
+              <div class="example col-lg-8 col-md-10 ml-auto mr-auto" style="border-radius: .625rem; box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1); border: 1px solid;margin-bottom:22px;">
+                <div class="row mb-5" style="margin-bottom: 0rem!important;">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col col-xs-1 text-center">
+                        <h5 style="color:#fafafa;margin-top:11px;font-weight:bold;">Aucune horaire n'est disponible pour cet arrêt.<h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Passage -->
+            <?php endif; ?>
           <?php
           for ($i = 0; $i < $nombrePassages; $i++) {
             ?>
