@@ -102,6 +102,9 @@ function autocomplete_itineraire(inp, arr, dir) {
         }
     }
     function directionsDropdown() {
+        //Garde l'index sélectionné
+        var selectElem = document.getElementById('selectDirectionList');
+        var index = selectElem.selectedIndex;
         //Supprimer contenu dropdown
         removeOptions(document.getElementById('selectDirectionList'));
         //Ajouter element
@@ -115,6 +118,8 @@ function autocomplete_itineraire(inp, arr, dir) {
                 x.add(option);
             }
         }
+        //Ré-applique l'index
+        selectElem.selectedIndex = index;
     }
     /*execute a function when someone clicks in the document:*/
     document.addEventListener("click", function (e) {
