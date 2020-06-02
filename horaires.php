@@ -19,8 +19,8 @@
     <!-- Données -->
     <?php include("include/keolis-api/divia_horaires.php"); ?>
 
-    <!-- Bloc inscription -->
-    <div class="inner-wrapper mt-auto mb-auto container">
+    <!-- Bloc horaires -->
+    <div class="inner-wrapper mt-auto mb-auto container" style="height:70%;">
       <div class="row">
         <div class="container mb-5">
           <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
@@ -70,7 +70,7 @@
       </div>
     </div>
   </div>
-  <!-- Fin bloc inscription -->
+  <!-- Fin bloc horaires -->
 
   <!-- Footer -->
   <?php include("footer.inc"); ?>

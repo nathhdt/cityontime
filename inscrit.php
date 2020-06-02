@@ -24,11 +24,11 @@ if (empty($user)) {
     <?php include("navbar.inc"); ?>
 
     <!-- Bloc inscription -->
-    <div class="inner-wrapper mt-auto mb-auto container">
+    <div class="inner-wrapper mt-auto mb-auto container" style="height:70%;">
       <div class="row">
         <div class="container mb-5">
           <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
-            <h3 class="section-title text-center my-5" style="color:#fafafa">Vous êtes inscrit ! Connectez-vous dès maintenant dans la barre de navigation.</h3>
+            <h3 class="section-title text-center my-5" style="color:#fafafa">Vous êtes inscrit ! Connectez-vous à partir de la barre de navigation.</h3>
           </div>
         </div>
       </div>
