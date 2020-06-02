@@ -50,7 +50,7 @@
                 <div class="col-md-12">
                   <div class="row">
                     <div class="col col-lg-2" style="display: flex;align-items: center;flex-wrap: wrap;">
-                      <img src="images/transports/divia/<?php echo $ligne; ?>.png" style="border-radius:.280rem;">
+                      <img src="images/transports/divia/<?php echo $ligne; ?>.png" style="border-radius:.280rem;max-height:25px;">
                     </div>
                     <div class="col-6">
                       <h5 style="color:#fafafa;margin-top:11px;">> <?php echo $direction; ?><h4>
