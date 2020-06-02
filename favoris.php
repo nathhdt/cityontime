@@ -13,7 +13,7 @@ if (empty($user)): ?>
   <?php include("header.inc"); ?>
 </head>
 
-<body class="shards-app-promo-page--1">
+<body class="shards-app-promo-page--1" style="background-color:#212529!important;">
   <div class="welcome d-flex justify-content-center flex-column">
 
     <!-- Navigation -->

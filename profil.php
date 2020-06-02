@@ -8,7 +8,7 @@
   <?php include("header.inc"); ?>
 </head>
 
-<body class="shards-app-promo-page--1">
+<body class="shards-app-promo-page--1" style="background-color:#212529!important;">
 
 <?php if (isset($_GET["success"]) == 'true') : ?>
   <div class="mb5">
