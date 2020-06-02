@@ -12,11 +12,24 @@ $arret = '';
 $direction = '';
 
 //Liste des lignes & arrpets
-$i = 0;
 foreach($horaires_data->horaires->horaire->description as $val)
 {
     $ligne = $horaires_data->horaires->horaire->description->ligne;
     $arret = $horaires_data->horaires->horaire->description->arret;
     $direction = $horaires_data->horaires->horaire->description->vers;
 }
-?>
+
+//Nombre d'horaires disponibles à afficher
+foreach($horaires_data->horaires->horaire->passages->attributes() as $a => $value) {
+    $nombrePassages = $value;
+}
+
+//Tableau avec les horaires
+$horaires_xml = array();
+
+//On récupère les horaires
+$j = 0;
+foreach ($horaires_data->horaires->horaire->passages->passage as $character) {
+    array_push($horaires_xml, $horaires_data->horaires->horaire->passages->passage[$j]->duree);
+    $j++;
+ }
