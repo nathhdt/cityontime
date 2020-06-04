@@ -27,10 +27,6 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="CityOnTime">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" href="app/touch-icon-iphone.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="app/touch-icon-ipad.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="app/touch-icon-iphone-retina.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="app/touch-icon-ipad-retina.png">
 
   <!-- Dépendances CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
