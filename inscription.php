@@ -19,7 +19,7 @@ if (empty($user)) { } else {
   <?php include("header.inc"); ?>
 </head>
 
-<body class="shards-app-promo-page--1" style="background-color:#212529!important;">
+<body class="shards-app-promo-page--1" style="background-color:#212529!important;-webkit-user-select: none;">
   <div class="welcome d-flex justify-content-center flex-column">
 
     <!-- Navigation -->
