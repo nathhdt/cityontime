@@ -116,6 +116,10 @@ function autocomplete_itineraire(inp, arr, dir) {
                 var option = document.createElement("option");
                 option.text = dir[1][i];
                 x.add(option);
+                //Si y'avait 0 éléments dans la dropdown
+                if (index == -1) {
+                    index = 1;
+                }
             }
         }
         //Ré-applique l'index
