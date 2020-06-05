@@ -1,10 +1,7 @@
 <?php
-error_reporting(E_ALL ^ E_NOTICE);
 session_start();
-$user = $_SESSION['email'];
-if (empty($user)) { } else {
-  header('Location: index');
-  exit();
+if (isset($_SESSION['email'])) {
+  header('Location: index.php');
 }
 ?>
 <!DOCTYPE html>
@@ -19,6 +16,28 @@ if (empty($user)) { } else {
 </head>
 
 <body class="shards-app-promo-page--1" style="background-color:#212529!important;-webkit-user-select: none;">
+<?php if (isset($_GET["email"]) == 'true') : ?>
+  <div class="mb5">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-bottom: 0rem;">
+      <button type="button" class="close" data-dismiss="alert">
+      <span aria-hidden="true">×</span></button>
+      <i class="fa fa-exclamation-triangle"></i>
+      <strong>Attention:</strong> l'ancien mot de passe entré ne correspond pas.
+    </div>
+  </div>
+<?php else : ?>
+<?php endif; ?>
+<?php if (isset($_GET["incomplet"]) == 'true') : ?>
+  <div class="mb5">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-bottom: 0rem;">
+      <button type="button" class="close" data-dismiss="alert">
+      <span aria-hidden="true">×</span></button>
+      <i class="fa fa-exclamation-triangle"></i>
+      <strong>Attention:</strong> le formulaire n'est pas complet.
+    </div>
+  </div>
+<?php else : ?>
+<?php endif; ?>
   <div class="welcome d-flex justify-content-center flex-column">
 
     <!-- Navigation -->
