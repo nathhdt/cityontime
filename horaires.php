@@ -1,4 +1,7 @@
-<!-- <?php echo $_GET['ref']; ?> -->
+<?php
+session_start();
+$user =  isset($_SESSION['email']);
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,7 +23,7 @@
     <?php include("include/keolis-api/divia_horaires.php"); ?>
 
     <!-- Bloc horaires -->
-    <div class="inner-wrapper mt-auto mb-auto container" style="height:70%;">
+    <div class="inner-wrapper mt-auto mb-auto container">
       <div class="row">
         <div class="container mb-5">
           <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">

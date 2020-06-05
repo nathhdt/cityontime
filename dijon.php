@@ -1,3 +1,8 @@
+<?php
+session_start();
+$user =  isset($_SESSION['email']);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 

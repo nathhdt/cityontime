@@ -13,7 +13,6 @@
             <!-- Vérification de session -->
                 <?php
                 error_reporting(E_ALL ^ E_NOTICE);
-                session_start();
                 $user = $_SESSION['email'];
                 if (empty($user)) {
                   echo "<li class='nav-item'>";
