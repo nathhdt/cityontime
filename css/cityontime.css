@@ -1,0 +1,12 @@
+.dropdown-menu.show {
+    background-color: #212529;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: #32373b;
+    color: #fff;
+}
