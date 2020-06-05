@@ -2,7 +2,6 @@
 session_start();
 $user =  isset($_SESSION['email']);
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,10 +10,10 @@ $user =  isset($_SESSION['email']);
 
   <!-- Header -->
   <?php include("header.inc"); ?>
+
 </head>
 
 <body class="shards-app-promo-page--1" style="background-color:#212529!important;-webkit-user-select: none;">
-
 <?php if (isset($_GET["success"]) == 'true') : ?>
   <div class="mb5">
     <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-bottom: 0rem;">
@@ -25,9 +24,7 @@ $user =  isset($_SESSION['email']);
     </div>
   </div>
 <?php else : ?>
-
 <?php endif; ?>
-
 <?php if (isset($_GET["oldpw"]) == 'false') : ?>
   <div class="mb5">
     <div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-bottom: 0rem;">
@@ -38,9 +35,7 @@ $user =  isset($_SESSION['email']);
     </div>
   </div>
 <?php else : ?>
-
 <?php endif; ?>
-
 <?php if (isset($_GET["diff"]) == 'true') : ?>
   <div class="mb5">
     <div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-bottom: 0rem;">
@@ -51,17 +46,10 @@ $user =  isset($_SESSION['email']);
     </div>
   </div>
 <?php else : ?>
-
 <?php endif; ?>
-
-<div class="welcome d-flex justify-content-center flex-column">
-
+  <div class="welcome d-flex justify-content-center flex-column">
     <!-- Navigation -->
-    <?php include("navbar.inc"); ?>
-
-    <!-- Données -->
-    <?php include("include/php/profile_data.php"); ?>
-
+    <?php include("navbar.inc"); include("include/php/profile_data.php"); ?>
     <!-- Bloc profil -->
     <div class="inner-wrapper mt-auto mb-auto container">
       <div class="row">
@@ -92,27 +80,26 @@ $user =  isset($_SESSION['email']);
                     <div class="form-group col-md-6">
                       <label for="form1-email" class="col-form-label" style="color:#fafafa">Ville</label>
                       <select class="custom-select" id="form1-state" name="choixville">
-<?php if ($ville == 'Dijon'): ?>
-  <option value="0" selected="selected">Dijon</option>
-  <option value="1">Angers</option>
-  <option value="2">Nantes</option>
-<?php elseif ($ville == 'Angers'): ?>
-  <option value="0">Dijon</option>
-  <option value="1" selected="selected">Angers</option>
-  <option value="2">Nantes</option>
-<?php else: ?>
-  <option value="0">Dijon</option>
-  <option value="1">Angers</option>
-  <option value="2" selected="selected">Nantes</option>
-<?php endif; ?>
-
-                      </select>
+            <?php if ($ville == 'Dijon'): ?>
+            <option value="0" selected="selected">Dijon</option>
+                        <option value="1">Angers</option>
+                        <option value="2">Nantes</option>
+            <?php elseif ($ville == 'Angers'): ?>
+            <option value="0">Dijon</option>
+                        <option value="1" selected="selected">Angers</option>
+                        <option value="2">Nantes</option>
+            <?php else: ?>
+            <option value="0">Dijon</option>
+                        <option value="1">Angers</option>
+                        <option value="2" selected="selected">Nantes</option>
+            <?php endif; ?>
+          </select>
                     </div>
                   </div>
                   <div class="row">
                     <div class="form-group col-md-6">
                       <div>
-                        <button type="submit" class="btn btn-secondary" style="font-size: 12px" name='type-submit'>Modifier</button>
+                        <button type="submit" class="btn btn-secondary" style="font-size: 12px" name="type-submit">Modifier</button>
                       </div>
                     </div>
                   </div>
@@ -152,12 +139,10 @@ $user =  isset($_SESSION['email']);
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </div>
-  <!-- Fin bloc profil -->
 
   <!-- Footer -->
   <?php include("footer.inc"); ?>

@@ -2,7 +2,6 @@
 session_start();
 $user =  isset($_SESSION['email']);
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,6 +10,7 @@ $user =  isset($_SESSION['email']);
 
   <!-- Header -->
   <?php include("header.inc"); ?>
+
 </head>
 
 <body class="shards-app-promo-page--1" style="background-color:#212529!important;-webkit-user-select: none;">
@@ -42,7 +42,6 @@ $user =  isset($_SESSION['email']);
       </div>
     </div>
   </div>
-  <!-- Fin bloc crédits -->
 
   <!-- Footer -->
   <?php include("footer.inc"); ?>

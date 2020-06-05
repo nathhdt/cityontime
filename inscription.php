@@ -1,4 +1,3 @@
-<!-- Vérification de session -->
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 session_start();
@@ -8,7 +7,6 @@ if (empty($user)) { } else {
   exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -17,6 +15,7 @@ if (empty($user)) { } else {
 
   <!-- Header -->
   <?php include("header.inc"); ?>
+
 </head>
 
 <body class="shards-app-promo-page--1" style="background-color:#212529!important;-webkit-user-select: none;">
@@ -67,9 +66,8 @@ if (empty($user)) { } else {
                         </select>
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="form1-state" style="color:#fafafa">Plus qu'une étape !</label>
                         <div>
-                          <button type="submit" class="btn btn-secondary" name="inscription-submit">Inscription</button>
+                          <button type="submit" class="btn btn-secondary" name="inscription-submit" style="margin-top:26px;">Inscription</button>
                         </div>
                       </div>
                     </div>
@@ -81,7 +79,6 @@ if (empty($user)) { } else {
       </div>
     </div>
   </div>
-  <!-- Fin bloc inscription -->
 
   <!-- Footer -->
   <?php include("footer.inc"); ?>

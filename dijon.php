@@ -2,7 +2,6 @@
 session_start();
 $user =  isset($_SESSION['email']);
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,6 +10,7 @@ $user =  isset($_SESSION['email']);
 
   <!-- Header -->
   <?php include("header.inc"); ?>
+
 </head>
 
 <body class="shards-app-promo-page--1" style="background-color:#212529!important;-webkit-user-select: none;">
@@ -39,11 +39,9 @@ $user =  isset($_SESSION['email']);
                     </div>
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Direction</label>
-
                       <select class="custom-select" id="selectDirectionList" name="direction" placeholder="Sélectionnez un arrêt valide...">
                         <option value="0" selected="selected">Sélectionnez un arrêt valide...</option>
                       </select>
-
                     </div>
                   </div>
                   <div class="row">
@@ -57,7 +55,6 @@ $user =  isset($_SESSION['email']);
               </div>
             </div>
           </div>
-          <!-- Horaires de passage -->
           <!-- Itinéraire -->
           <div class="example col-lg-8 col-md-10 ml-auto mr-auto" style="border-radius: .625rem; box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1); border: 1px solid;">
             <h5 style="color:#fafafa;margin-top:11px;">Itinéraire</h5>
@@ -85,18 +82,16 @@ $user =  isset($_SESSION['email']);
               </div>
             </div>
           </div>
-          <!-- Fin itinéraire -->
         </div>
       </div>
     </div>
   </div>
-  <!-- Fin bloc ville -->
 
   <!-- Script autocomplete -->
   <script src="include/js/autocomplete.js"></script>
   <script src="include/js/autocomplete-itineraire.js"></script>
   <script>
-    //Récupération des lignes
+    //Liste des arrêts & directions
     var arrets = ["<?php include("include/keolis-api/divia_liste_arrets.php"); ?>"];
     var directions = [<?php include("include/keolis-api/divia_liste_directions.php"); ?>];
 
@@ -121,6 +116,7 @@ $user =  isset($_SESSION['email']);
 
   <!-- Footer -->
   <?php include("footer.inc"); ?>
+
 </body>
 
 </html>

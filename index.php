@@ -2,7 +2,6 @@
 session_start();
 $user =  isset($_SESSION['email']);
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,14 +10,14 @@ $user =  isset($_SESSION['email']);
 
   <!-- Header -->
   <?php include("header.inc"); ?>
+
 </head>
 
 <body class="shards-app-promo-page--1" style="background-color:#212529!important;-webkit-user-select: none;">
   <div class="welcome d-flex justify-content-center flex-column">
-
     <!-- Navigation -->
     <?php include("navbar.inc"); ?>
-
+    
     <!-- Bloc accueil -->
     <div class="inner-wrapper mt-auto mb-auto container">
       <div class="row">
@@ -38,7 +37,6 @@ $user =  isset($_SESSION['email']);
       </div>
     </div>
   </div>
-  <!-- Fin bloc accueil -->
 
   <!-- Choix de ville -->
   <div class="blog section section-invert py-4" id="choisirmaville">
@@ -82,7 +80,6 @@ $user =  isset($_SESSION['email']);
       </div>
     </div>
   </div>
-  <!-- Fin choix de ville -->
 
   <!-- Footer -->
   <?php include("footer.inc"); ?>
