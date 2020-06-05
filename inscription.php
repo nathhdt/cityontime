@@ -22,7 +22,7 @@ if (isset($_SESSION['email'])) {
       <button type="button" class="close" data-dismiss="alert">
       <span aria-hidden="true">×</span></button>
       <i class="fa fa-exclamation-triangle"></i>
-      <strong>Attention:</strong> l'ancien mot de passe entré ne correspond pas.
+      <strong>Attention:</strong> l'e-mail entré est déjà utilisé pour un compte.
     </div>
   </div>
 <?php else : ?>
