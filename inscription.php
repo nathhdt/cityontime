@@ -39,6 +39,17 @@ if (isset($_SESSION['email'])) {
   </div>
 <?php else : ?>
 <?php endif; ?>
+<?php if (isset($_GET["captcha"]) == 'false') : ?>
+  <div class="mb5">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-bottom: 0rem;">
+      <button type="button" class="close" data-dismiss="alert">
+      <span aria-hidden="true">×</span></button>
+      <i class="fa fa-exclamation-triangle"></i>
+      <strong>Attention:</strong> vous n'avez pas la permission de vous inscrire.
+    </div>
+  </div>
+<?php else : ?>
+<?php endif; ?>
   <div class="welcome d-flex justify-content-center flex-column">
 
     <!-- Navigation -->

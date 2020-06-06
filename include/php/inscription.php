@@ -54,5 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])
     } else {
         //<= 0.5, bot !
         header('Location: ../../inscription?captcha=false');
+        exit();
     }
 }
