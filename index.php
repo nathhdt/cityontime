@@ -90,8 +90,8 @@ $user =  isset($_SESSION['email']);
           <div class="row">
             <div class="col">
               <div class="text-center">
-                <img src="images/ios-share.png" style="margin-bottom:10px;">
-                <label>Appuyez sur cet icône et ajoutez le site en tant que signet !</label>
+                <img src="images/ios-share.png" style="margin-bottom:10px;max-width:40px;">
+                <label>Appuyez sur cet icône pour ajouter le site en tant que signet !</label>
               </div>
             </div>
           </div>
