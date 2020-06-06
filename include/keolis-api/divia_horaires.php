@@ -29,11 +29,16 @@ $horaires_xml = array();
 //On récupère les horaires
 $j = 0;
 foreach ($horaires_data->horaires->horaire->passages->passage as $character) {
-    //Conversion de l'heure en minutes avant le temps récup. en XML
-    $now = new DateTime();
+    //Calcul heure entre maintenant et bus
+    $heure = $horaires_data->heure;
     $heureXML = $horaires_data->horaires->horaire->passages->passage[$j]->duree;
-    $heure = DateTime::createFromFormat('H:i', $heureXML);
-    $minutes = $heure->format('i') - $now->format('i');
+
+    $heureBus = DateTime::createFromFormat('H:i', $heureXML);
+    $heureMaintenant = DateTime::createFromFormat('H:i', $heure);
+
+    $minutes = $heureBus->format('i') - $heureMaintenant->format('i');
+
     array_push($horaires_xml, $minutes);
+
     $j++;
 }
