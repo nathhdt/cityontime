@@ -26,7 +26,7 @@ if (isset($_SESSION['email'])) {
       <div class="row">
         <div class="container mb-5">
           <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
-            <h3 class="section-title text-center my-5" style="color:#fafafa">Oups ! La page que vous cherchez n'existe pas (plus) ! Retournez à l'accueil <a href="index" style="color:#fafafa;text-decoration:underline;">ici</a> !</h3>
+            <h3 class="section-title text-center my-5" style="color:#fafafa">404 ! La page que vous cherchez n'existe pas (plus) ! Retournez à l'accueil <a href="index" style="color:#fafafa;text-decoration:underline;">ici</a> !</h3>
           </div>
         </div>
       </div>
