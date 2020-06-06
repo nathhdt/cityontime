@@ -11,7 +11,8 @@ if (isset($_SESSION['email'])) {
   <title>CityOnTime - Inscription</title>
 
   <!-- Header -->
-  <?php include("header.inc"); ?>
+  <?php include("header.inc"); echo "\n"; ?>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcE8QAVAAAAAIlgkzticmhrANNGoLBZrhAIHu6k"></script>
 
 </head>
 
@@ -86,11 +87,20 @@ if (isset($_SESSION['email'])) {
                       </div>
                       <div class="form-group col-md-6">
                         <div>
-                          <button type="submit" class="btn btn-secondary" name="inscription-submit" style="margin-top:26px;">Inscription</button>
+                          <button type="submit" value="submit" class="btn btn-secondary" name="inscription-submit" style="margin-top:26px;">Inscription</button>
                         </div>
+                        <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
                       </div>
                     </div>
                   </form>
+                  <script>
+                    grecaptcha.ready(function () {
+                      grecaptcha.execute('6LcE8QAVAAAAAIlgkzticmhrANNGoLBZrhAIHu6k', { action: 'submit' }).then(function (token) {
+                      var recaptchaResponse = document.getElementById('recaptchaResponse');
+                      recaptchaResponse.value = token;
+                    });
+                    });
+                  </script>
                 </div>
               </div>
             </div>
