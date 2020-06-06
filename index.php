@@ -32,7 +32,7 @@ $user =  isset($_SESSION['email']);
           </div>
         </div>
         <div class="col-lg-4 col-md-5 col-sm-12 ml-auto">
-          <img class="iphone-mockup ml-auto" src="images/tramway.png">
+          <img class="iphone-mockup ml-auto" src="images/app.png">
         </div>
       </div>
     </div>
@@ -73,6 +73,25 @@ $user =  isset($_SESSION['email']);
                   <p class="card-text">Nantes est une commune de l'ouest de la France, située au sud du Massif armoricain, qui s'étend sur les rives de la Loire, à 50 km de l'océan Atlantique.</p>
                   <a class="btn btn-light disabled" href="nantes">Bientôt disponible</a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signet -->
+  <div class="contact section-invert py-4">
+    <h3 class="section-title text-center m-5">CityOnTime sur votre écran d'accueil</h3>
+    <div class="container py-4">
+      <div class="row justify-content-md-center px-4">
+        <div class="contact-form col-sm-12 col-md-10 col-lg-7 p-4 mb-4 card">
+          <div class="row">
+            <div class="col">
+              <div class="text-center">
+                <img src="images/ios-share.png" style="margin-bottom:10px;">
+                <label>Appuyez sur cet icône et ajoutez le site en tant que signet !</label>
               </div>
             </div>
           </div>
