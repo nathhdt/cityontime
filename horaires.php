@@ -56,7 +56,7 @@ for ($i = 0; $i < $nombrePassages; $i++) {
                     <h5 style="color:#fafafa;margin-top:11px;">> <?php echo $direction; ?><h4>
                   </div>
                   <div class="col">
-                    <h5 style="color:#fafafa;margin-top:11px;text-align:right;font-weight:bold;"><?php echo $horaires_xml[$i].' mn'; ?><h4>
+                    <h5 style="color:#fafafa;margin-top:11px;text-align:right;font-weight:bold;"><?php echo $horaires_xml[$i].'mn'; ?><h4>
                   </div>
                 </div>
               </div>
