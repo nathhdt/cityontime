@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])
     $recaptcha = json_decode($recaptcha);
 
     // Take action based on the score returned:
+    echo 'Score: '.$recaptcha->score;
     if ($recaptcha->score >= 0.5) {
         // Verified - send email
         echo "yes";
