@@ -32,7 +32,7 @@ $user =  isset($_SESSION['email']);
           </div>
         </div>
         <div class="col-lg-4 col-md-5 col-sm-12 ml-auto">
-          <img class="iphone-mockup ml-auto" src="images/app.png">
+          <img class="iphone-mockup ml-auto" src="images/app.png" style="max-width:100%;">
         </div>
       </div>
     </div>
