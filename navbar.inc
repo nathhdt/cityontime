@@ -19,10 +19,19 @@
         </button>
         <div class="navbar-collapse collapse" id="navbarNavDropdown" style="">
           <ul class="navbar-nav">
+            <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') : ?>
             <li class="nav-item active">
+            <?php else: ?>
+            <li class="nav-item">
+            <?php endif; ?>
               <a class="nav-link" href="index">Accueil</a>
             </li>
             <li class="nav-item dropdown">
+            <?php if (basename($_SERVER['PHP_SELF']) == 'dijon.php') : ?>
+            <li class="nav-item dropdown active">
+            <?php else: ?>
+            <li class="nav-item dropdown">
+            <?php endif; ?>
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Villes</a>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="dijon">Dijon</a>
@@ -30,7 +39,11 @@
                 <a class="dropdown-item disabled">Nantes</a>
               </div>
             </li>
+            <?php if (basename($_SERVER['PHP_SELF']) == 'favoris.php') : ?>
+            <li class="nav-item active">
+            <?php else: ?>
             <li class="nav-item">
+            <?php endif; ?>
               <a class="nav-link" href="favoris">Favoris</a>
             </li>
           </ul>
