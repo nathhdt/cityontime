@@ -22,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])
         $motdepasse = mysqli_real_escape_string($connection, htmlspecialchars($_POST['inscription-motdepasse']));
         $ville = mysqli_real_escape_string($connection, htmlspecialchars($_POST['inscription-ville']));
 
+        //Hash MD5
+        $motdepasse_md5 = md5($motdepasse);
 
         //Check si form complète
         if (empty($nom) || empty($prenom) || empty($email) || empty($motdepasse) || $ville == '0') {
@@ -43,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['recaptcha_response'])
                 } else {
                 //On introduit l'utilisateur dans la BDD
                 $stmt = $connection->prepare('INSERT INTO `cot_users`(`nom`, `prenom`, `email`, `password`, `city`) VALUES (?,?,?,?,?)');
-                $stmt->bind_param("sssss", $nom, $prenom, $email, $motdepasse, $ville);
+                $stmt->bind_param("sssss", $nom, $prenom, $email, $motdepasse_md5, $ville);
                 $stmt->execute();
 
                 //Page inscrit

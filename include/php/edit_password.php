@@ -9,22 +9,23 @@ if (isset($_POST['type-submit'])) {
     $newPass = $_POST["newpw"];
     $confNewPass = $_POST["confnewpw"];
 
-    echo $user . ', ' . $newPass . ', ' . $confNewPass;
-
+    //Hashs MD5
+    $oldPass_md5 = md5($oldPass);
+    $newPass_md5 = md5($newPass);
+    $confNewPass_md5 = md5($confNewPass);
 
     if (empty($oldPass) || empty($newPass) || empty($confNewPass)) {
         header('Location: ../../profil.php');
         exit();
     } else {
-        $request = "SELECT count(*) FROM cot_users WHERE email = '" . $user . "' AND password = '" . $oldPass . "' ";
+        $request = "SELECT count(*) FROM cot_users WHERE email = '" . $user . "' AND password = '" . $oldPass_md5 . "' ";
         $exec_request = mysqli_query($connection, $request);
         $reponse      = mysqli_fetch_array($exec_request);
         $count = $reponse['count(*)'];
 
-        if ($count != 0) // Nom d'utilisateur et mot de passe corrects
+        if ($count != 0)
             {
                 //Ancien mot de passe ok
-
                 //Vérification que les 2 mdp entrés sont les mêmes
                 if ($newPass == $confNewPass) {
                     //Les mots de passe correspondent
@@ -32,7 +33,7 @@ if (isset($_POST['type-submit'])) {
                     //Si on passe les tests et que tout est ok, exécution modification mdp
                     //Exécution de la requête
                     $stmt = $connection->prepare('UPDATE `cot_users` SET `password`= ? WHERE `email`= ?');
-                    $stmt->bind_param('ss', $newPass, $user);
+                    $stmt->bind_param('ss', $newPass_md5, $user);
                     $stmt->execute();
 
                     //Redirection avec popup
