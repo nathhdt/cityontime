@@ -89,14 +89,14 @@ $user =  isset($_SESSION['email']);
 
   <!-- Script autocomplete -->
   <script src="include/js/autocomplete.js"></script>
-  <script src="include/js/autocomplete-itineraire.js"></script>
+  <script src="include/js/autocomplete-horaires.js"></script>
   <script>
     //Liste des arrêts & directions
     var arrets = ["<?php include("include/keolis-api/divia_liste_arrets.php"); ?>"];
     var directions = [<?php include("include/keolis-api/divia_liste_directions.php"); ?>];
 
     //Doublons
-    function removeDuplicates(arrets) {
+    function supprimerDupliques(arrets) {
       let unique = {};
       arrets.forEach(function(i) {
         if (!unique[i]) {
@@ -106,10 +106,10 @@ $user =  isset($_SESSION['email']);
       return Object.keys(unique);
     }
 
-    liste_arrets = removeDuplicates(arrets)
+    liste_arrets = supprimerDupliques(arrets)
 
     //Autocompletes
-    autocomplete_itineraire(document.getElementById("inputHorairesArret"), liste_arrets, directions)
+    autocomplete_horaires(document.getElementById("inputHorairesArret"), liste_arrets, directions)
     autocomplete(document.getElementById("inputItineraireDepart"), liste_arrets);
     autocomplete(document.getElementById("inputItineraireArrivee"), liste_arrets);
   </script>

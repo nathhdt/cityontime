@@ -70,7 +70,7 @@ $user =  isset($_SESSION['email']);
                 <img class="card-img-top" src="images/villes/nantes.jpg" alt="Nantes">
                 <div class="card-body">
                   <h4 class="card-title">Nantes</h4>
-                  <p class="card-text">Nantes est une commune de l'ouest de la France, située au sud du Massif armoricain, qui s'étend sur les rives de la Loire, à 50 km de l'océan Atlantique.</p>
+                  <p class="card-text">Nantes est une commune de l'ouest de la France, située au sud du Massif armoricain, qui s'étend sur les rives de la Loire.</p>
                   <a class="btn btn-light disabled" href="nantes">Bientôt disponible</a>
                 </div>
               </div>
