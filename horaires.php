@@ -65,6 +65,9 @@ for ($i = 0; $i < $nombrePassages; $i++) {
         <?php
         }
         ?>
+        <div class="example col-lg-8 col-md-10 ml-auto mr-auto text-center" >
+        <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-star" aria-hidden="true"></i> Ajouter aux favoris</button>
+      </div>
 </div>
       </div>
     </div>
