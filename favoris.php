@@ -86,8 +86,8 @@ if (empty($user)) : ?>
                   <div class="color">
                     <div class="swatch">
                     <a href="../<?php echo $liensArrets[$i2]; ?>" style="display: block;">
-                      <img src="images/transports/<?php echo $transport; ?>/<?php echo $listeLignes[$i2]; ?>.png" style="border-radius:.280rem;max-height:25px;margin-top:20px;">
-                      <span class="title" style="margin-top:16px;margin-bottom: 22px;"><?php echo $listeHoraires[$i2]; ?> mn</span>
+                      <img src="images/transports/<?php echo $transport; ?>/<?php echo $listeLignes[$i2]; ?>.png" style="border-radius:.280rem;max-height:25px;margin-top:24px;">
+                      <span class="title" style="margin-top:16px;margin-bottom:18px;font-weight:bold;"><?php echo $listeHoraires[$i2]; ?> mn</span>
                     </a>
                     </div>
                     <span class="title"><?php echo $listeArrets[$i2]; ?></span>
