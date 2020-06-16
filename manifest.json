@@ -3,7 +3,7 @@
     "name": "CityOnTime",
     "lang": "fr",
     "description": "Trouvez votre itinéraire en quelques clics !",
-    "start_url": "http://cityontime.fr",
+    "start_url": "https://cityontime.fr",
     "background_color": "#212529",
     "theme_color": "#17c671",
     "dir": "ltr",
