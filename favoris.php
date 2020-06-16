@@ -87,7 +87,15 @@ if (empty($user)) : ?>
                     <div class="swatch">
                     <a href="../<?php echo $liensArrets[$i2]; ?>" style="display: block;">
                       <img src="images/transports/<?php echo $transport; ?>/<?php echo $listeLignes[$i2]; ?>.png" style="border-radius:.280rem;max-height:25px;margin-top:24px;">
-                      <span class="title" style="margin-top:16px;margin-bottom:18px;font-weight:bold;"><?php echo $listeHoraires[$i2]; ?> mn</span>
+                      <span class="title" style="margin-top:16px;margin-bottom:18px;font-weight:bold;">
+                      <?php
+                      if ($listeHoraires[$i2] == '') {
+                        echo "<i class='fas fa-times'></i>";
+                      } else {
+                        echo $listeHoraires[$i2]." mn";
+                      }
+                      ?>
+                      </span>
                     </a>
                     </div>
                     <span class="title"><?php echo $listeArrets[$i2]; ?></span>
