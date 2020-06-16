@@ -61,7 +61,7 @@ $user =  isset($_SESSION['email']);
                 <div class="card-body">
                   <h4 class="card-title">Angers</h4>
                   <p class="card-text">Angers est une ville de l'ouest de la France, située à côté de la Maine, ancien siège médiéval en périphérie de la vallée de la Loire.</p>
-                  <a class="btn btn-light disabled" href="angers">Bientôt disponible</a>
+                  <a class="btn btn-light disabled">Bientôt disponible</a>
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@ $user =  isset($_SESSION['email']);
                 <div class="card-body">
                   <h4 class="card-title">Nantes</h4>
                   <p class="card-text">Nantes est une commune de l'ouest de la France, située au sud du Massif armoricain, qui s'étend sur les rives de la Loire.</p>
-                  <a class="btn btn-light disabled" href="nantes">Bientôt disponible</a>
+                  <a class="btn btn-light disabled">Bientôt disponible</a>
                 </div>
               </div>
             </div>

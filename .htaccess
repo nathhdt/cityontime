@@ -12,3 +12,6 @@ RewriteRule ^ %{REQUEST_URI}.php [L]
 
 # Erreur 404
 ErrorDocument 404 /404.php
+
+# Dossier .git masqué
+RedirectMatch 404 /\.git
