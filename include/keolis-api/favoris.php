@@ -18,6 +18,7 @@ while ($row = $result->fetch_array(MYSQLI_NUM)) {
 
 //On récupère les horaires
 $codeville = '';
+$transport = '';
 
 //Tableaux des données favoris
 $listeLignes = [];
@@ -32,6 +33,7 @@ foreach ($ref as $curr_ref) {
   //Quelle ville
   if ($city[$j] == 'Dijon') {
     $codeville = '217';
+    $transport = 'divia';
   }
 
   //Récupération de l'XML par l'API Keolis

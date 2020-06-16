@@ -6,7 +6,8 @@ $user =  isset($_SESSION['email']);
 <html lang="fr">
 
 <head>
-  <title>CityOnTime - Horaires</title>
+<?php include("include/keolis-api/divia_horaires.php"); ?>
+  <title>CityOnTime - Horaires | <?php echo $arret; ?> > <?php echo $direction; ?></title>
 
   <!-- Header -->
   <?php include("header.inc"); ?>
@@ -18,8 +19,7 @@ $user =  isset($_SESSION['email']);
 
     <!-- Navigation -->
     <?php include("navbar.inc"); ?>
-
-    <?php include("include/keolis-api/divia_horaires.php"); ?>
+    
 <!-- Bloc horaires -->
     <div class="inner-wrapper mt-auto mb-auto container">
       <div class="row">
@@ -34,7 +34,7 @@ $user =  isset($_SESSION['email']);
                   <div class="col-md-12">
                     <div class="row">
                       <div class="col col-xs-1 text-center">
-                        <h5 style="color:#fafafa;margin-top:11px;font-weight:bold;">Aucune horaire n'est disponible pour cet arrêt.<h4>
+                        <h5 style="color:#fafafa;margin-top:11px;font-weight:bold;">Aucun horaire n'est disponible pour cet arrêt.<h4>
                       </div>
                     </div>
                   </div>
@@ -50,7 +50,7 @@ for ($i = 0; $i < $nombrePassages; $i++) {
               <div class="col-md-12">
                 <div class="row">
                   <div class="col col-lg-2" style="display: flex;align-items: center;flex-wrap: wrap;">
-                    <img src="images/transports/divia/<?php echo $ligne; ?>.png" style="border-radius:.280rem;max-height:25px;">
+                    <img src="images/transports/<?php echo $transport; ?>/<?php echo $ligne; ?>.png" style="border-radius:.280rem;max-height:25px;">
                   </div>
                   <div class="col-6">
                     <h5 style="color:#fafafa;margin-top:11px;">> <?php echo $direction; ?><h4>
@@ -66,7 +66,7 @@ for ($i = 0; $i < $nombrePassages; $i++) {
         }
         ?>
         <div class="example col-lg-8 col-md-10 ml-auto mr-auto text-center" >
-        <button type="button" class="btn btn-outline-secondary btn-sm"><i class="fa fa-star" aria-hidden="true"></i> Ajouter aux favoris</button>
+        <a class="btn btn-outline-secondary btn-sm" href="include/keolis-api/ajouter_favori.php?ref=<?php echo $ref_id; ?>&ville=<?php echo $ville; ?>" role="button"><i class="fa fa-star" aria-hidden="true"></i> Ajouter aux favoris</a>
       </div>
 </div>
       </div>

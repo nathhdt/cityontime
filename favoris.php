@@ -54,7 +54,7 @@ if (empty($user)) : ?>
 
       <!-- Navigation -->
       <?php include("navbar.inc");
-      include("include/keolis-api/divia_favoris.php"); ?>
+      include("include/keolis-api/favoris.php"); ?>
 
       <!-- Bloc favoris -->
       <div class="inner-wrapper mt-auto mb-auto container">
@@ -69,45 +69,26 @@ if (empty($user)) : ?>
           </div>
           <div class="example col-md-10 ml-auto mr-auto">
           <?php endif; ?>
-
-          <?php
-
-          //Calcul du nombre de rows
-          $division = $j / 4;
-          $division = ceil($division);
-
-          for ($i = 0; $i < $division; $i++) {
-            ?>
-
             <div class="row">
-
               <?php
               for ($i2 = 0; $i2 < $j; $i2++) {
-                ?>
-
-
-
-
+              ?>
                 <div class="color-wrapper col-lg-3 col-md-6 col-sm-6">
                   <div class="color">
                     <div class="swatch">
-                    <a href="../<?php echo $liensArrets[$i2]; ?>" style="display: block;margin-bottom: 22px;">
-                      <img src="images/transports/divia/<?php echo $listeLignes[$i2]; ?>.png" style="border-radius:.280rem;max-height:25px;margin-top:20px;">
-                      <span class="title" style="margin-top:16px;"><?php echo $listeHoraires[$i2]; ?> mn</span>
+                    <a href="../<?php echo $liensArrets[$i2]; ?>" style="display: block;">
+                      <img src="images/transports/<?php echo $transport; ?>/<?php echo $listeLignes[$i2]; ?>.png" style="border-radius:.280rem;max-height:25px;margin-top:20px;">
+                      <span class="title" style="margin-top:16px;margin-bottom: 22px;"><?php echo $listeHoraires[$i2]; ?> mn</span>
                     </a>
                     </div>
                     <span class="title"><?php echo $listeArrets[$i2]; ?></span>
                     <span class="direction"><?php echo $listeDirections[$i2]; ?></span>
                   </div>
                 </div>
-
               <?php
-            }
-            ?>
+              }
+              ?>
             </div>
-          <?php
-        }
-        ?>
         </div>
       </div>
 

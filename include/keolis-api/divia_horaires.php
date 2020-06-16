@@ -1,6 +1,8 @@
 <?php
 require 'include/php/dbh.php';
 $codeville = '217';
+$transport = 'divia';
+$ville = 'Dijon';
 $ref_id = $_GET['ref'];
 
 //Récupération de l'XML par l'API Keolis
