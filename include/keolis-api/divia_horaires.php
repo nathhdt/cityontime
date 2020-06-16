@@ -11,7 +11,7 @@ $ligne = '';
 $arret = '';
 $direction = '';
 
-//Liste des lignes & arrpets
+//Liste des lignes & arrets
 foreach ($horaires_data->horaires as $val) {
         $ligne = $horaires_data->horaires->horaire->description->ligne;
         $arret = $horaires_data->horaires->horaire->description->arret;
@@ -44,3 +44,4 @@ foreach ($horaires_data->horaires->horaire->passages->passage as $character) {
 
     $j++;
 }
+?>
