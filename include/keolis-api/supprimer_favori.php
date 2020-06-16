@@ -1,9 +1,6 @@
 <?php
 session_start();
 $user = $_SESSION['email'];
-if (empty($user)) {
-  header('Location: ../../favoris.php');
-}
 
 require '../php/dbh.php';
 
@@ -13,11 +10,11 @@ $ref_id = $_GET['ref'];
 $ville = $_GET['ville'];
 
 //On ajoute le favori dans la base de données
-$stmt = $connection->prepare('INSERT INTO `cot_favoris`(`email`, `city`, `ref`) VALUES (?,?,?)');
+$stmt = $connection->prepare('DELETE FROM `cot_favoris` WHERE `email`= ? AND `city`= ? AND `ref`= ?');
 $stmt->bind_param("sss", $user, $ville, $ref_id);
 $stmt->execute();
 
 mysqli_close($connection);
 
-header('Location: ../../favoris.php');
+header('Location: ../../horaires?ref='.$ref_id);
 ?>

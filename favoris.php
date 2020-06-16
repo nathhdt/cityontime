@@ -68,7 +68,16 @@ if (empty($user)) : ?>
             </div>
           </div>
           <div class="example col-md-10 ml-auto mr-auto">
-          <?php endif; ?>
+        <?php else: ?>
+          <div class="row">
+            <div class="container mb-5">
+              <div class="section-title col-lg-8 col-md-10 ml-auto mr-auto">
+                <h3 class="section-title text-center my-5" style="color:#fafafa">Favoris</h3>
+              </div>
+            </div>
+          </div>
+        <div class="example col-md-10 ml-auto mr-auto">
+        <?php endif; ?>
             <div class="row">
               <?php
               for ($i2 = 0; $i2 < $j; $i2++) {

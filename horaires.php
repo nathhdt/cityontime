@@ -66,7 +66,7 @@ for ($i = 0; $i < $nombrePassages; $i++) {
         }
         ?>
         <div class="example col-lg-8 col-md-10 ml-auto mr-auto text-center" >
-        <a class="btn btn-outline-secondary btn-sm" href="include/keolis-api/ajouter_favori.php?ref=<?php echo $ref_id; ?>&ville=<?php echo $ville; ?>" role="button"><i class="fa fa-star" aria-hidden="true"></i> Ajouter aux favoris</a>
+        <?php include("include/keolis-api/bouton_favori.php"); ?>
       </div>
 </div>
       </div>
