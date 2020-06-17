@@ -89,7 +89,8 @@ if (empty($user)) : ?>
                       <img src="images/transports/<?php echo $transport; ?>/<?php echo $listeLignes[$i2]; ?>.png" style="border-radius:.280rem;max-height:25px;margin-top:24px;">
                       <span class="title" style="margin-top:16px;margin-bottom:18px;font-weight:bold;">
                       <?php
-                      if ($listeHoraires[$i2] == '') {
+                      if ($listeHoraires[$i2] !== 0 && empty($listeHoraires[$i2])) {
+                        echo "<script>alert('".$listeHoraires[$i2]."');</script>";
                         echo "<i class='fas fa-times'></i>";
                       } else {
                         echo $listeHoraires[$i2]." mn";

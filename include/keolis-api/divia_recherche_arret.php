@@ -7,6 +7,14 @@ if (isset($_POST['type-submit'])) {
     $ligne = substr($direction, 0,2);
     $direction = substr($direction, 5);
 
+    
+
+    //Check si form pas complète
+    if (empty(arret) || empty($direction) || empty($ligne)) {
+        header('Location: ../../dijon');
+        exit(0);
+    }
+
     require '../php/dbh.php';
 
     $stmt = $connection->prepare('SELECT `arret_ref` FROM `cot_divia_arrets` WHERE `arret`= ? AND `direction`= ? AND `ligne_nom`= ?');
