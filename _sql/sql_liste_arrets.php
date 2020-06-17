@@ -30,11 +30,12 @@ foreach($lignes->alss->als as $val)
     foreach($arrets->alss->als as $val)
     {
 
-
         echo 'INSERT INTO `cot_divia_arrets`(`ligne_nom`, `ligne_code`, `arret`, `arret_ref`, `direction`) VALUES (\''.str_replace("'", "''", $lignes->alss->als[$i]->ligne->nom).'\',\''.str_replace("'", "''", $lignes->alss->als[$i]->ligne->code).'\',\''.str_replace("'", "''", $arrets->alss->als[$j]->arret->nom).'\',\''.str_replace("'", "''", $arrets->alss->als[$j]->refs).'\',\''.str_replace("'", "''", $lignes->alss->als[$i]->ligne->vers).'\');<br>';
         $j++;
     }
     $i++;
     echo '<br>';
 }
+echo "<p>-- ### CORRECTIONS<p>";
+echo "UPDATE `cot_divia_arrets` SET `arret`='Lycée H. Fontaine' WHERE `arret`='Lycée H.Fontaine';";
 ?>

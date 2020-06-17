@@ -4,11 +4,18 @@ if (isset($_POST['type-submit'])) {
     //Récupération des infos de la Form
     $arret = $_POST['arret'];
     $direction = $_POST['direction'];
-    $ligne = substr($direction, 0,2);
-    $direction = substr($direction, 5);
+
+    $infos = explode(" - ", $direction);
+
+
+
+    $ligne = $infos[0];
+    $direction = $infos[1];
+
+    echo $arret."<br>".$direction."<br>".$ligne."<br>";
 
     //Check si form pas complète
-    if (empty(arret) || empty($direction) || empty($ligne)) {
+    if (empty($arret) || empty($direction) || empty($ligne)) {
         header('Location: ../../dijon');
         exit(0);
     }
@@ -24,7 +31,6 @@ if (isset($_POST['type-submit'])) {
     $row = $result->fetch_array(MYSQLI_NUM);
 
     $arret_ref = $row[0];
-
 
     //Redirection vers la page horaires
     header('Location: ../../horaires?ref='.$arret_ref);

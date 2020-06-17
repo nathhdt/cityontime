@@ -111,11 +111,15 @@ if (isset($_POST['type-submit'])) {
 
     //Correspondances viables entre les arrêts listés ici
     $correspondances = array_intersect($listeArretsAccessiblesDepuisDepart, $listeArretsAccessiblesDepuisArrivee);
-
     if ($correspondances !== false) {
-        echo '<br><br>##########<br><br>CORRESPONDANCES DISPONIBLES<br><br>';
+        echo '<br><br>##########<br><br>CORRESPONDANCES DISPONIBLES (1 SEUL CHANGEMENT)<br><br>';
         foreach ($correspondances as $k => $v) {
             echo " - $v<br>";
         }
     }
+
+
+
+
+    
 }
