@@ -57,24 +57,24 @@ $user =  isset($_SESSION['email']);
           </div>
           <!-- Itinéraire -->
           <div class="example col-lg-8 col-md-10 ml-auto mr-auto" style="border-radius: .625rem; box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,.1), 0 0.9375rem 1.40625rem rgba(90,97,105,.1), 0 0.25rem 0.53125rem rgba(90,97,105,.12), 0 0.125rem 0.1875rem rgba(90,97,105,.1); border: 1px solid;">
-            <h5 style="color:#fafafa;margin-top:11px;">Itinéraire</h5>
+            <h5 style="color:#fafafa;margin-top:11px;">Itinéraire (prochainement)</h5>
             <div class="row mb-5" style="margin-bottom: 0rem!important;">
               <div class="col-md-12">
                 <form autocomplete="off" action="include/keolis-api/divia_recherche_itineraire" method="POST" id="itineraire-form">
                   <div class="row">
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Départ</label>
-                      <input id="inputItineraireDepart" type="text" class="form-control" placeholder="République..." style="position:relative;" name="depart">
+                      <input id="inputItineraireDepart" type="text" class="form-control" placeholder="République..." style="position:relative;" name="depart" disabled>
                     </div>
                     <div class="form-group col-md-6">
                       <label for="form1-name" class="col-form-label" style="color:#fafafa">Arrivée</label>
-                      <input id="inputItineraireArrivee" type="text" class="form-control" placeholder="Darcy..." style="position:relative;" name="arrivee">
+                      <input id="inputItineraireArrivee" type="text" class="form-control" placeholder="Darcy..." style="position:relative;" name="arrivee" disabled>
                     </div>
                   </div>
                   <div class="row">
                     <div class="form-group col-md-6">
                       <div>
-                        <button type="submit" class="btn btn-secondary" style="font-size: 12px" name='type-submit'>Rechercher</button>
+                        <button type="submit" class="btn btn-secondary" style="font-size: 12px" name='type-submit' disabled>Rechercher</button>
                       </div>
                     </div>
                   </div>
